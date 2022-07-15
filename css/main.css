@@ -1,0 +1,42 @@
+.hero {
+    height: 100vh;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.hero-cover {
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.menu {
+    float: left;
+    min-height: 700px;
+    width: 223px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    left: 30px;
+    background-color: rgba(12, 13, 13, 0.2) !important;
+
+}
+
+.nav-link {
+    color: rgb(250, 241, 241);
+    -webkit-transition: color 2s;
+    transition: color 2s;
+}
+
+
+
+
+.nav-link:hover {
+    color: rgb(236, 255, 236);
+}
+
+.my-bio {
+    background-color: black;
+    color: white;
+}

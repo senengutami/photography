@@ -3,7 +3,7 @@ const bktContainer = document.getElementById("npl-hero-cover-wrapper");
 
 bktContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
-    console.log("npl", evt.deltaY)
+    // console.log("npl", evt.deltaY)
     bktContainer.scrollLeft += evt.deltaY;
 });
 
@@ -11,7 +11,7 @@ const hkContainer = document.getElementById("hk-hero-cover-wrapper");
 
 hkContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
-    console.log("hk", evt.deltaY)
+    // console.log("hk", evt.deltaY)
     hkContainer.scrollLeft += evt.deltaY;
 });
 
@@ -19,16 +19,16 @@ const ptnContainer = document.getElementById("ind-hero-cover-wrapper");
 
 ptnContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
-    console.log("ptn", evt.deltaY)
+    // console.log("ptn", evt.deltaY)
     ptnContainer.scrollLeft += evt.deltaY;
 })
-const abtContainer = document.getElementById("abt-hero-cover-wrapper");
+// const abtContainer = document.getElementById("abt-hero-cover-wrapper");
 
-abtContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    console.log(evt.deltaY)
-    abtContainer.scrollLeft += evt.deltaY;
-})
+// abtContainer.addEventListener("wheel", (evt) => {
+//     evt.preventDefault();
+//     // console.log(evt.deltaY)
+//     abtContainer.scrollLeft += evt.deltaY;
+// })
 
 
 
@@ -39,8 +39,8 @@ hk.addEventListener("click", (evt) => {
     showOnlyChosen("hk")
 })
 
-const bkt = document.getElementById('nav-npl');
-bkt.addEventListener("click", (evt) => {
+const npl = document.getElementById('nav-npl');
+npl.addEventListener("click", (evt) => {
     evt.preventDefault();
     showOnlyChosen("npl")
 })
@@ -53,17 +53,21 @@ ptn.addEventListener("click", (evt) => {
 
 const abt = document.getElementById('nav-abt');
 abt.addEventListener("click", (evt) => {
-
-
     evt.preventDefault();
     showOnlyChosen("abt")
 })
 
 // function to hide all containers, show the only one we clicked.
 function showOnlyChosen(tgPlace) {
+    console.log(tgPlace)
     const places = Array.from(document.getElementsByClassName("place"));
     places.forEach(place => {
         place.style.display = "none"
     })
     document.getElementById(tgPlace).style.display = "block"
 }
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    //do work
+    showOnlyChosen("hk")
+});

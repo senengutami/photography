@@ -37,6 +37,17 @@
 }
 
 .my-bio {
-    background-color: black;
     color: white;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.about {
+    width: 50%;
+    margin: auto;
+    height: 100%;
+    background-color: darkolivegreen;
 }

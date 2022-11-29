@@ -79,7 +79,9 @@ function checkDirection(evt) {
     if (touchendX < touchstartX) {
         hkContainer.scrollLeft += evt.deltaY;
     }
-    if (touchendX > touchstartX) alert('swiped right!')
+    if (touchendX > touchstartX) {
+        alert("abc")
+    }
 }
 
 document.addEventListener('touchstart', e => {

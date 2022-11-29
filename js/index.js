@@ -75,8 +75,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 let touchstartX = 0
 let touchendX = 0
 
-function checkDirection() {
-    if (touchendX < touchstartX) alert('swiped left!')
+function checkDirection(evt) {
+    if (touchendX < touchstartX) {
+        hkContainer.scrollLeft += evt.deltaY;
+    }
     if (touchendX > touchstartX) alert('swiped right!')
 }
 
@@ -86,5 +88,5 @@ document.addEventListener('touchstart', e => {
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX
-    checkDirection()
+    checkDirection(e)
 })

@@ -63,8 +63,10 @@ function showOnlyChosen(tgPlace) {
     const places = Array.from(document.getElementsByClassName("place"));
     places.forEach(place => {
         place.style.display = "none"
+        place.classList.remove("custom")
     })
     document.getElementById(tgPlace).style.display = "block"
+    document.getElementById(tgPlace).classList.add("custom")
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -77,10 +79,15 @@ let touchendX = 0
 
 function checkDirection(evt) {
     if (touchendX < touchstartX) {
-        hkContainer.scrollLeft += evt.deltaY;
+        // alert(evt.changedTouches[0].clientX)
+        hkContainer.scrollLeft += evt.changedTouches[0].clientX;
+        ptnContainer.scrollLeft += evt.changedTouches[0].clientX;
+        bktContainer.scrollLeft += evt.changedTouches[0].clientX;
     }
     if (touchendX > touchstartX) {
-        alert("abc")
+        hkContainer.scrollLeft -= evt.changedTouches[0].clientX;
+        ptnContainer.scrollLeft -= evt.changedTouches[0].clientX;
+        bktContainer.scrollLeft -= evt.changedTouches[0].clientX;
     }
 }
 

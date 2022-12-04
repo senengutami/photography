@@ -10,6 +10,7 @@
 
 }
 
+
 .menu {
     float: left;
     min-height: 700px;
@@ -20,8 +21,13 @@
     z-index: 999999;
     left: 30px;
     background-color: rgba(12, 13, 13, 0.2) !important;
-
 }
+
+@media screen and (max-width: 600px) {
+    .menu {
+      background-color: lightblue;
+    }
+  }
 
 .nav-link {
     color: rgb(250, 241, 241);
